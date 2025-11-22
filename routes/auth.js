@@ -40,7 +40,7 @@ router.get("/api/links", auth, getUserLinks);
 router.post("/shorten", auth, shortUrl);
 router.get("/:code", redirectUrl)
 router.get("/links/:code", getByShortCode)
-router.delete("/api/:code", auth, deleteByShortCode)
+router.delete("/:code", auth, deleteByShortCode)
 
 
 
