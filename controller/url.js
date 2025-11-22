@@ -102,7 +102,7 @@ export const shortUrl = async (req, res) => {
     );
 
     return res.json({
-      shortUrl: `http://localhost:3000/api/${finalCode}`,
+      shortUrl: `https://urlbackend-gold.vercel.app/${finalCode}`,
     });
 
   } catch (error) {
