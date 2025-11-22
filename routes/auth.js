@@ -38,8 +38,8 @@ router.post("/logout", auth, logout);
 
 router.get("/api/links", auth, getUserLinks);
 router.post("/shorten", auth, shortUrl);
-router.get("/api/:code", redirectUrl)
-router.get("/api/links/:code", getByShortCode)
+router.get("/:code", redirectUrl)
+router.get("/links/:code", getByShortCode)
 router.delete("/api/:code", auth, deleteByShortCode)
 
 
