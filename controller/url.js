@@ -76,7 +76,7 @@ export const shortUrl = async (req, res) => {
 
   try {
 
-    if (!validator.isURL(longUrl, { require_protocol: true })) {
+    if(!validator.isURL(longUrl, { require_protocol: true })) {
       return res.status(400).json({ message: "Invalid URL" });
     }
 
@@ -102,7 +102,7 @@ export const shortUrl = async (req, res) => {
     );
 
     return res.json({
-      shortUrl: `https://urlbackend-gold.vercel.app/${finalCode}`,
+      shortUrl: `https://urlbackend-gold.vercel.app/api/${finalCode}`,
     });
 
   } catch (error) {
